@@ -5,6 +5,7 @@ title: "Data Science Projects"
 author_profile: true
 header:
   image: "/images/nature.jpg"
+classes: wide
 ---
 # <center> Breast Cancer Wisconsin </center>
 
