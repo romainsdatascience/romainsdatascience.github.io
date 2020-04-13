@@ -1,13 +1,13 @@
 # main links
 main:
-  - title: "About"
-    url: /about/
-  - title: "Portfolio"
-    url: /portfolio/
-  - title: "CV"
-    url: /CV/
   - title: "Projects by Tags"
     url: /tags/
+  - title: "About"
+    url: /about/
+  - title: "CV"
+    url: /CV/
+  # - title: "Projects by Tags"
+  #   url: /tags/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"

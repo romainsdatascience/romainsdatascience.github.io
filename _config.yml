@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Romain Sonck"
-  avatar           : "/images/bio.png"
+  avatar           : "/images/profile.png"
   bio              : "Just another Data Science Enthusiast"
   location         : "Brussels "
   email            :
