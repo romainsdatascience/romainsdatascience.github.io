@@ -7,7 +7,7 @@ header:
 
 ## Welcome
 
-You have landed on the wedsite I have created in my honour. Other than its self-idolatry end, its main purpose is to gather the data science projects I have undertaken.
+You have landed on the website I have created in my honour. Other than its self-idolatry end, its main purpose is to gather the data science projects I have undertaken.
 
 This being said, if you want to:
 * Know a bit more about myself, go to "About".
