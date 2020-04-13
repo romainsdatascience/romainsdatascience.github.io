@@ -5,4 +5,4 @@ header:
   image: "/images/nature.jpg"
 author_profile: true
 ---
-<a href="others/RomainSonck.pdf" class="image fit"><img src="images/marr_pic.jpg" alt=""></a>
+<object data="others/RomainSonck.pdf" width="1000" height="1000" type='application/pdf'/>
