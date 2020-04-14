@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "Short bio"
 permalink: /about/
 author_profile: true
 layout: archive
