@@ -1,9 +1,8 @@
 ---
 title: "About"
 permalink: /about/
-header:
-  image: "/images/nature.jpg"
 author_profile: true
+layout: archive
 ---
 
-I am good
+### I am good
