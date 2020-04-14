@@ -8,8 +8,6 @@ excerpt: "Classification of cancerous tumors on the Breast Cancer Wisconsin data
 classes: wide
 ---
 
-# <center> Breast Cancer Wisconsin </center>
-
 In this project, I will apply basic classification models on the Breast Cancer Wisconsin dataset. The main subject of discussion is centered around the different basic classification models and the best way to preprocess the data according to the model we use. Nevertheless, this project also include brief data profiling, exploration data analysis and feature selection sections.
 
 **Description of the data:**
@@ -791,7 +789,7 @@ plt.show()
 
 
 
-<center> ![png](/images/BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_23_1.png) </center>
+![png](/images/BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_23_1.png)
 
 The target data is not so much imbalanced: 357 patients have a benign tumor.
 
@@ -1318,6 +1316,7 @@ np.exp(0.073865)
 
 
 Wooow! The recall has jumped to 0.927 while the accuracy remains around 0.95.
+
 **Coefficients interpretation**
 
 * An increase of one unit in 'symmetry_worst' accounts for an increase in the odds of having cancer disease of np.exp(1.456574) = 4.29 or 429%.
