@@ -790,8 +790,7 @@ plt.show()
 
 
 
-![png](images/BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_23_1.png)
-
+![png](/images/BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_23_1.png)
 
 The target data is not so much imbalanced: 357 patients have a benign tumor
 
@@ -809,7 +808,7 @@ plt.show()
 ```
 
 
-![png](BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_25_0.png)
+![png](/images/:BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_25_0.png)
 
 
 The mean of the observations in most independant variable differs following the classes. In some of the independant variables, the interquartile in each class does not even overlap which can be use to distinguish the two classes by a classification model.
