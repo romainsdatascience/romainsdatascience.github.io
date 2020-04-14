@@ -1,6 +1,7 @@
 ---
-layout: archive
+layout: default
 ---
+
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
 {% elsif page.header.video.id and page.header.video.provider %}
@@ -23,7 +24,6 @@ layout: archive
     {{ content }}
   </div>
 </div>
-
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
 {% if paginator %}
