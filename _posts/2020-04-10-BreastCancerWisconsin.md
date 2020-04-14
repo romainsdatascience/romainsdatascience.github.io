@@ -5,6 +5,7 @@ tags: [Classification]
 header:
   image: "images/datahorizontal.jpg"
 excerpt: "Classification of cancerous tumors on the Breast Cancer Wisconsin dataset"
+classes: wide
 ---
 
 # <center> Breast Cancer Wisconsin </center>
@@ -12,15 +13,15 @@ excerpt: "Classification of cancerous tumors on the Breast Cancer Wisconsin data
 In this project, I will apply basic classification models on the Breast Cancer Wisconsin dataset. The main subject of discussion is centered around the different basic classification models and the best way to preprocess the data according to the model we use. Nevertheless, this project also include brief data profiling, exploration data analysis and feature selection sections.
 
 **Description of the data:**
-<br></br>
-<br>This dataset regroups data on cells located in the breast mass. Features are computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. They describe characteristics of the cell nuclei present in the image. </br>
-<br></br>
-<br>**Attribute Information:**</br>
+
+This dataset regroups data on cells located in the breast mass. Features are computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. They describe characteristics of the cell nuclei present in the image.
+
+**Attribute Information:**
 
 1. ID number
 2. Diagnosis (M = malignant, B = benign)
 
-<br>**From columns 3 to 32:**</br>
+**From columns 3 to 32:**
 
 Ten real-valued features are computed for each cell nucleus:
 
@@ -790,9 +791,9 @@ plt.show()
 
 
 
-![png](/images/BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_23_1.png)
+<center> ![png](/images/BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_23_1.png) </center>
 
-The target data is not so much imbalanced: 357 patients have a benign tumor
+The target data is not so much imbalanced: 357 patients have a benign tumor.
 
 
 ```python
@@ -808,7 +809,7 @@ plt.show()
 ```
 
 
-![png](/images/:BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_25_0.png)
+![png](/images/BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_25_0.png)
 
 
 The mean of the observations in most independant variable differs following the classes. In some of the independant variables, the interquartile in each class does not even overlap which can be use to distinguish the two classes by a classification model.
@@ -827,7 +828,7 @@ plt.show()
 ```
 
 
-![png](BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_27_0.png)
+![png](/images/BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_27_0.png)
 
 
 The distinction between the two classes is less evident for the 10 first variables. However, some independant variables might be helpful to ditinguish the two classes e.g. there is a clear difference between 'area_se' in the benign class and milagnant class.
@@ -846,7 +847,7 @@ plt.show()
 ```
 
 
-![png](BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_29_0.png)
+![png](/images/BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_29_0.png)
 
 
 ## Feature selection
@@ -860,7 +861,7 @@ sns.heatmap(corrmat, vmax=.9,annot = True, square=True);
 ```
 
 
-![png](BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_31_0.png)
+![png](/images/BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_31_0.png)
 
 
 Some of the independant variables are highly correlated with others. The inclusion of a correlated variable in a linear model brings few additional information and add more noise in the model. Therefore, when two variables are correlated, a common practice is to remove the one of the correlated variables and keep only one. By doing so we keep most of the information while removing noise.
@@ -1167,9 +1168,9 @@ print("The cross-validated accuracy is {:.3f} ".format(results_cv['test_accuracy
     The cross-validated accuracy is 0.953
 
 
-<br> The recall is the metric I will use to assess the performance of the different models. Indeed, I want to reduce as much as possible the number of false negative i.e. tell a patient she/he has no cancer although he/she has one. In other words, I want to predict accurately the patients that have cancer and, equivalently, have a recall of 1. I will also keep track of the accuracy of the models</br>
-<br></br>
-<br>Linear Discriminant Analysis correctly predict 95% of the observations. Nevertheless, the recall is only at 0.887. This is not surprising since LDA tries to approximate the Bayes classifier and strive to yield the smallest possible total number of misclassified observations, irrespective of which class the erros come from.</br>
+The recall is the metric I will use to assess the performance of the different models. Indeed, I want to reduce as much as possible the number of false negative i.e. tell a patient she/he has no cancer although he/she has one. In other words, I want to predict accurately the patients that have cancer and, equivalently, have a recall of 1. I will also keep track of the accuracy of the models
+
+Linear Discriminant Analysis correctly predict 95% of the observations. Nevertheless, the recall is only at 0.887. This is not surprising since LDA tries to approximate the Bayes classifier and strive to yield the smallest possible total number of misclassified observations, irrespective of which class the erros come from.
 
 ### Logistic Regression
 
@@ -1316,11 +1317,11 @@ np.exp(0.073865)
 
 
 
-<br>Wooow! The recall has jumped to 0.927 while the accuracy remains around 0.95.</br>
-<br> **Coefficients interpretation** </br>
-<br>
+Wooow! The recall has jumped to 0.927 while the accuracy remains around 0.95.
+**Coefficients interpretation**
+
 * An increase of one unit in 'symmetry_worst' accounts for an increase in the odds of having cancer disease of np.exp(1.456574) = 4.29 or 429%.
-* Similarly, an increase of one unit in 'concave points_se' accounts for an increase in the odds of having cancer disease of np.exp(0.073865) = 1.077 or 7.67%.</br>
+* Similarly, an increase of one unit in 'concave points_se' accounts for an increase in the odds of having cancer disease of np.exp(0.073865) = 1.077 or 7.67%.
 
 
 ## Random Forest
