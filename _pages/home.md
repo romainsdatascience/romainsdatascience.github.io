@@ -1,6 +1,8 @@
 ---
 layout: home
 author_profile: true
+permalink: /
+hidden: true
 header:
   image: "/images/DataLake.jpg"
 ---
