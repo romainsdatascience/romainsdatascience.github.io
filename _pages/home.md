@@ -5,9 +5,8 @@ permalink: /
 hidden: true
 header:
   image: "/images/DataLake.jpg"
+page-title: "Welcome"
 ---
-
-## Welcome
 
 You have landed on the website I have created in my honour. Other than its self-idolatry end, its main purpose is to gather the data science projects I have undertaken.
 
