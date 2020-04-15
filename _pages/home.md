@@ -15,6 +15,6 @@ This being said, if you want to:
 * Walk through my portfolio of data science projects, go to "Portfolio"
 * Have a look to my Curriculum Vitae, go to 'CV'
 
-I hope you will enjoy the reading.
+I hope you will enjoy the readings.
 
 Do not hesitate to contact me.

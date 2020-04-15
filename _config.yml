@@ -95,7 +95,8 @@ analytics:
 author:
   name             : "Romain Sonck"
   avatar           : "/images/profile.png"
-  bio              : "Just another Data Science Enthusiast"
+  bio              : "Just another Data
+  Science Enthusiast"
   location         : "Brussels "
   email            :
   links:
@@ -111,9 +112,9 @@ author:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/romainsdatascience/romainsdatascience.github.io"
+    - # label: "GitHub"
+      # icon: "fab fa-fw fa-github"
+      # url: "https://github.com/romainsdatascience/romainsdatascience.github.io"
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/romain-s/"

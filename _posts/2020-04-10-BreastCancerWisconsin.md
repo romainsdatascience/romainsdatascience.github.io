@@ -6,13 +6,14 @@ header:
   image: "images/datahorizontal.jpg"
 excerpt: "Classification of cancerous tumors on the Breast Cancer Wisconsin dataset"
 classes: wide
+author_profile: false
 ---
 
-In this project, I will apply basic classification models on the Breast Cancer Wisconsin dataset. The main subject of discussion is centered around the different basic classification models and the best way to preprocess the data according to the model we use. Nevertheless, this project also include brief data profiling, exploration data analysis and feature selection sections.
+In this project, we will apply basic classification models on the Breast Cancer Wisconsin dataset. The discussion is centered around the different basic classification models and the best way to preprocess the data according to the model we use. Nevertheless, this project also include brief data profiling, exploration data analysis and feature selection sections.
 
 **Description of the data:**
 
-This dataset regroups data on cells located in the breast mass. Features are computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. They describe characteristics of the cell nuclei present in the image.
+The dataset regroups data on cells located in the breast mass. Features are computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. They describe characteristics of the cell nuclei present in the image.
 
 **Attribute Information:**
 
@@ -34,7 +35,7 @@ Ten real-valued features are computed for each cell nucleus:
 9. symmetry
 10. fractal dimension ("coastline approximation" - 1)
 
-*Source for data and data description: http://mlr.cs.umass.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29*
+<a href="http://mlr.cs.umass.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29">Source for data and data description.</a>
 
 
 ```python
@@ -413,7 +414,9 @@ data.info()
     memory usage: 146.8+ KB
 
 
+
 In the entire dataset, there is no null values. All the independant variables are in a numerical type (float64). Only the target variable, 'diagnosis', is in a object type (probably string type).  
+
 
 
 ```python
@@ -664,7 +667,7 @@ data.describe()
 
 
 
-The range of the observation differs widely accross variables. 'Area_worst' ranges from 185.2 to 4254 while 'concavity_mean' ranges from 0.00 to 0.4268. To visualize the data properly, we will have to standardize the data.
+The range of the observations differ widely accross variables. 'Area_worst' ranges from 185.2 to 4254 while 'concavity_mean' ranges from 0.00 to 0.4268. To visualize the data properly, we will have to standardize the data.
 
 
 ```python
@@ -678,7 +681,7 @@ data.shape
 
 
 
-33 columns ? Strange, we should only have 32 columns.
+33 columns ? Strange, the description of the data mentions only 32 columns.
 
 
 ```python
@@ -765,7 +768,7 @@ data.isna().sum()
 
 
 
-There is no NaN value anymore and all the columns are in the appropriate type. The dataset is very 'clean' in the sense that nearly none data cleaning is needed. (it the reason why i have chosen this data)
+There is no NaN value anymore and all the columns are in the appropriate type. The dataset is very 'clean' in the sense that nearly none data cleaning is needed (it the reason why i have chosen this data).
 
 ## Exploration Data Analysis
 
@@ -810,7 +813,7 @@ plt.show()
 ![png](/images/BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_25_0.png)
 
 
-The mean of the observations in most independant variable differs following the classes. In some of the independant variables, the interquartile in each class does not even overlap which can be use to distinguish the two classes by a classification model.
+The mean of the observations in most independant variable differs following the classes. For some of the independant variables, the interquartile in each class does not even overlap which can be use to distinguish the two classes by a classification model.
 
 
 ```python
@@ -829,7 +832,7 @@ plt.show()
 ![png](/images/BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_27_0.png)
 
 
-The distinction between the two classes is less evident for the 10 first variables. However, some independant variables might be helpful to ditinguish the two classes e.g. there is a clear difference between 'area_se' in the benign class and milagnant class.
+The distinction between the two classes is less evident for the first ten variables. Still, some independant variables might be helpful to distinguish the two classes e.g. there is a clear difference between 'area_se' in the benign class and malignant class.
 
 
 ```python
@@ -862,7 +865,7 @@ sns.heatmap(corrmat, vmax=.9,annot = True, square=True);
 ![png](/images/BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_31_0.png)
 
 
-Some of the independant variables are highly correlated with others. The inclusion of a correlated variable in a linear model brings few additional information and add more noise in the model. Therefore, when two variables are correlated, a common practice is to remove the one of the correlated variables and keep only one. By doing so we keep most of the information while removing noise.
+Some of the independent variables are highly correlated with others. The inclusion of a correlated variable in a linear model brings few additional information and add more noise in the model. Therefore, when two variables are correlated, a common practice is to remove the one of the correlated variables and keep only one. By doing so we keep most of the information while removing noise.
 
 To ease the process of feature selection, I have define two functions:
 
@@ -1463,7 +1466,7 @@ With the PCA, the performances of KNN have slightly improve. The appropriate num
 
 ## Conclusion
 
-The performance varies greatly following the model we use. For example, Linear Discriminant analysis yields poor result while Support Vector Machines achieve a 95% recall. Moreover, they are numerous hyper-parameters on which we can 'play' to increase the performance. The one thing all these models have in common is that their performances vary greatly with the data you feed them with.
+The performances vary greatly following the model we use. For example, Linear Discriminant analysis yields poor result while Support Vector Machines achieve a 95% recall. Moreover, they are numerous hyper-parameters on which we can 'play' to increase the performance. The one thing all these models have in common is that their performances vary greatly with the data you feed them with.
 
 # Resources:
 
