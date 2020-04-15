@@ -6,6 +6,7 @@ header:
   image: "images/BreastCancerWisconsinFinal_files/doctors.jpg"
 excerpt: "Classification of cancerous tumors on the Breast Cancer Wisconsin dataset"
 classes: wide
+author_profile: false
 ---
 
 In this project, we will apply basic classification models on the Breast Cancer Wisconsin dataset. The discussion is centered around the different basic classification models and the best way to preprocess the data according to the model we use. Nevertheless, this project also include brief data profiling, exploration data analysis and feature selection sections.
@@ -414,7 +415,7 @@ data.info()
 
 
 
-In the entire dataset, there is no null values. All the independant variables are in a numerical type (float64). Only the target variable, 'diagnosis', is in a object type (probably string type).  
+In the entire dataset, there is no null values. All the independent variables are in a numerical type (float64). Only the target variable, 'diagnosis', is in a object type (probably string type).  
 
 
 
@@ -812,7 +813,7 @@ plt.show()
 ![png](/images/BreastCancerWisconsinFinal_files/BreastCancerWisconsinFinal_25_0.png)
 
 
-The mean of the observations in most independant variable differs following the classes. For some of the independant variables, the interquartile in each class does not even overlap which can be use to distinguish the two classes by a classification model.
+The mean of the observations in most independent variable differs following the classes. For some of the independent variables, the interquartile in each class does not even overlap which can be use to distinguish the two classes by a classification model.
 
 
 ```python
@@ -872,7 +873,7 @@ To ease the process of feature selection, I have define two functions:
 
 2. A function that return a list of non-highly correlated variables that can be used for modelling. How does it work?
 
-    1. Begin with a list containing all the independant variables.
+    1. Begin with a list containing all the independent variables.
 
     2. Remove the variables that are correlated and only keep the one that is the more correlated with the target variable 'diagnosis'.
 
@@ -1111,7 +1112,7 @@ feature_selection_correlation(data, 0.7)
 
 
 
-The twelve independant variables here above are the twelve highest corrolated variables with the target variable under the condition that they have a correlation lower than 0.7 between them.
+The twelve independent variables here above are the twelve highest corrolated variables with the target variable under the condition that they have a correlation lower than 0.7 between them.
 
 ## Linear classification models
 
