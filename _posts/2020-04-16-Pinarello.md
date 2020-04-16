@@ -3,7 +3,7 @@ title: "Pinarello Android App Opportunity"
 date: 2020-04-10
 tags: [EDA]
 header:
-  image: "images/Pinarello_files/Pinarello5.jpeg"
+  image: "images/Pinarello_files/pinarellobackground.jpeg"
 excerpt: "Exploration Data Analysis on Google Play Store dataset"
 classes: wide
 ---
