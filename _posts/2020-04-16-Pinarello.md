@@ -1645,7 +1645,7 @@ plt.show();
 ```
 
 
-![png](Pinarello_files/Pinarello_99_0.png)
+![png](/images/Pinarello_files/Pinarello_99_0.png)
 
 
 
