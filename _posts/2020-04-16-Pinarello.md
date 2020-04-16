@@ -3,8 +3,8 @@ title: "Pinarello Android App Opportunity"
 date: 2020-04-10
 tags: [Data Cleaning, EDA]
 header:
-  image: "images/pinarellobackground.jpg"
-excerpt: "Classification of cancerous tumors on the Breast Cancer Wisconsin dataset"
+  image: "images/Pinarello_files/pinarellobackground.jpg"
+excerpt: "Exploration Data Analysis on Google Play Store dataset"
 classes: wide
 ---
 
@@ -12,9 +12,9 @@ In this project, we will put ourself in the place of a data scientist working fo
 
 Pinarello is an Italian bicycle manufacturer founded in 1952. Its product range is mainly composed of road, track and cyclo-cross bikes. Pinarello's bikes are expensive, optimized and incredibly good looking. Although it is easy, we can compare Pinarello to Ferrari in Formula 1.
 
-  Pinarello is looking for new ways to improve its marketing strategy and communication. A small team has been assembled to achieve this mission. My mission is to help the team to make the right decision and to work in collaboration with them to discover new ways to improve the marketing strategy of Pinarello.
+Pinarello is looking for new ways to improve its marketing strategy and communication. A small team has been assembled to achieve this mission. My mission is to help the team to make the right decision and to work in collaboration with them to discover new ways to improve the marketing strategy of Pinarello.
 
-Quickly the team decided to explore the possibility to develop **an application on the Android Store**. The manager of the team who had recently had a seminar on "Disruptive innovations in communication", stubbornly wanted to launch a cycling game application. Indeed, this would enable Pinarello to:
+Quickly the team decided to explore the possibility to develop **an application on the Android Store**. Indeed, this would enable Pinarello to:
 
 1. Acquire information on the clients and prospects.
 2. Enable Push notifications.
@@ -23,14 +23,15 @@ Quickly the team decided to explore the possibility to develop **an application 
 5. Increase interactions between brand lovers.
 
 ### My mission
+
 My mission is to investigate if the development of a gaming mobile application is an appropriate marketing move for Pinarello and to get a global picture of the applications in Google Play Store.  
 
 
 # Origin of the data
 
 The dataset used for the analysis of the Android mobile app market originates from kaggle. The dataset contain details on applications that can be found on the Google Play Store. The dataset was created on the 2019-04-05. I chose to work with the minimal version consisting of 32.000 applications.
-<br></br>
-<br> *Source to the datasets:* https://www.kaggle.com/gauthamp10/google-playstore-apps
+
+<a href="https://www.kaggle.com/gauthamp10/google-playstore-apps">Source for data and data description.</a>
 
 # Data Cleaning
 
@@ -100,6 +101,7 @@ all_data.info()
 
 Looking at the type of the columns, we can already see that we will have to work on the columns: **Rating, Installs, Size and Price**. Indeed, these columns have an object type while their type should preferably be numerical.
 
+Glimpse at what the data look like:
 
 ```python
 all_data.sample(10)
@@ -284,9 +286,6 @@ all_data.sample(10)
 </table>
 </div>
 
-
-
-Glimpse at what the data look like.
 
 ## Is there any missing values ?
 
@@ -1022,7 +1021,7 @@ clean_data.info()
     memory usage: 2.7+ MB
 
 
-The **Rating, Installs, Size and Price** columns have been converted successfuly to numerical type.
+The **Rating, Installs, Size and Price** columns have been converted successfully to numerical type.
 
 ### Last updated column
 
@@ -1104,36 +1103,6 @@ clean_data.drop(axis = 0, index = index_to_drop, inplace = True)
 ```
 
 ## Feature creation
-
-Now that the necessary data cleaning has been done, let's turn to feature creation. This step will lead to the 'creation' of three new features: **days since update, length of App Name and Free vs Non-free**.
-
-The aim is to answer the questions:
-
-1. Is there a length name choice more appropriate than another?
-2. Does regular update makes an app more successful ?
-
-
-### New column: days_since_update
-
-
-```python
-# I took the day of the last update as the reference time to compute the days since update
-
-today = clean_data['Last Updated'].max()
-clean_data['days_since_update'] = (today - clean_data['Last Updated'])
-```
-
-
-```python
-clean_data['days_since_update'] = clean_data['days_since_update'].dt.days.astype('float64')
-```
-
-### New column: length of App name
-
-
-```python
-clean_data['len_name'] = clean_data['App Name'].apply(lambda x: len(x))
-```
 
 ### New column: Free vs Paid
 
@@ -1361,7 +1330,7 @@ plt.show()
 ```
 
 
-![png](Pinarello_files/Pinarello_75_0.png)
+![png](/images/Pinarello_files/Pinarello_75_0.png)
 
 
 **Information from graph:**
@@ -1424,7 +1393,7 @@ plt.show()
 
 
 
-![png](Pinarello_files/Pinarello_78_1.png)
+![png](/images/Pinarello_files/Pinarello_78_1.png)
 
 
 **Information from graph:**
@@ -1441,10 +1410,6 @@ free_cat_installs = df_free.groupby(by = 'Category')['Installs','type'].mean().s
 order = free_cat_installs.index
 ```
 
-    /opt/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:3: FutureWarning: Indexing with multiple keys (implicitly converted to a tuple of keys) will be deprecated, use a list instead.
-      This is separate from the ipykernel package so we can avoid doing imports until
-
-
 
 ```python
 plt.figure(figsize= (16,8))
@@ -1455,7 +1420,7 @@ plt.show()
 ```
 
 
-![png](Pinarello_files/Pinarello_81_0.png)
+![png](/images/Pinarello_files/Pinarello_81_0.png)
 
 
 1. Unsurprisingly, the average number of installs in each category is higher in free applications than in non-free applications.
@@ -1472,12 +1437,7 @@ plt.xticks(rotation=90)
 plt.show()
 ```
 
-    /opt/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:1: FutureWarning: Indexing with multiple keys (implicitly converted to a tuple of keys) will be deprecated, use a list instead.
-      """Entry point for launching an IPython kernel.
-
-
-
-![png](Pinarello_files/Pinarello_83_1.png)
+![png](/images/Pinarello_files/Pinarello_83_1.png)
 
 
 The difference in the mean reviews between free and non-free applications within category is less straightforward. One hypothesis is that people tend to review more applications for which they have paid than the ones they acquire for free.
@@ -1579,7 +1539,7 @@ plt.show()
 ```
 
 
-![png](Pinarello_files/Pinarello_87_0.png)
+![png](/images/Pinarello_files/Pinarello_87_0.png)
 
 
 Medical applications seems to have several expensive applications.
@@ -1593,7 +1553,7 @@ plt.show()
 ```
 
 
-![png](Pinarello_files/Pinarello_89_0.png)
+![png](/images/Pinarello_files/Pinarello_89_0.png)
 
 
 
@@ -1603,19 +1563,10 @@ df_price_no_extreme_non_free.Price.mean()
 ```
 
 
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-52-41a5eddca3a1> in <module>
-    ----> 1 df_price_no_extreme_non_free = df_price_no_extreme.loc[df_price_no_extreme['Price'] > 0, :]
-          2 df_price_no_extreme_non_free.Price.mean()
+    4.1436118059027995
 
 
-    NameError: name 'df_price_no_extreme' is not defined
-
-
-Among the non-free applications, the mean price accross category is 4.14$. The categories with the higher average price are medical and librairies and demo followed by finance, business and sports applications
+Among the non-free applications, the mean price across category is 4.14$. The categories with the higher average price are medical and libraries and demo followed by finance, business and sports applications
 
 ## Installs
 
@@ -1628,7 +1579,7 @@ plt.show()
 ```
 
 
-![png](Pinarello_files/Pinarello_93_0.png)
+![png](/images/Pinarello_files/Pinarello_93_0.png)
 
 
 
@@ -1669,10 +1620,10 @@ _ = ax.set_title('Number of Reviews Vs Number of Downloads (Log scaled)')
 ```
 
 
-![png](Pinarello_files/Pinarello_96_0.png)
+![png](/images/Pinarello_files/Pinarello_96_0.png)
 
 
-There is a linear relationship between the number of installs and the number of reviews. This relationship is more easily seen on a log scale for the installs since the number of installs is a lot bigger than the number of reviews. One hypothesisis that people install the application before reviewing it but the opposite is not true.
+There is a linear relationship between the number of installs and the number of reviews. This relationship is more easily seen on a log scale for the installs since the number of installs is a lot bigger than the number of reviews. One hypothesis that people install the application before reviewing it but the opposite is not true.
 
 ## Price
 
@@ -1731,7 +1682,7 @@ plt.show()
 ```
 
 
-![png](Pinarello_files/Pinarello_103_0.png)
+![png](/images/Pinarello_files/Pinarello_103_0.png)
 
 
 Amongst the non-free applications, more than 50% have a price ranging from 0 to 3 dollar and the price of an application rarely exceeds 20$.
@@ -1747,7 +1698,7 @@ plt.show()
 ```
 
 
-![png](Pinarello_files/Pinarello_106_0.png)
+![png](/images/Pinarello_files/Pinarello_106_0.png)
 
 
 The majority of applications are in the 'Everyone' content rating. 'Adults only 18+' and 'Unrated' have only 3 observations each.
@@ -1770,7 +1721,7 @@ plt.show()
 ```
 
 
-![png](Pinarello_files/Pinarello_109_0.png)
+![png](/images/Pinarello_files/Pinarello_109_0.png)
 
 
 When the extreme value are not taken into account, the category 'Everyone 10+' has the higher average number of installs.
@@ -1784,7 +1735,7 @@ plt.show()
 ```
 
 
-![png](Pinarello_files/Pinarello_111_0.png)
+![png](/images/Pinarello_files/Pinarello_111_0.png)
 
 
 There is no differences in the distribution of ratings for the content ratings.
@@ -1792,6 +1743,3 @@ There is no differences in the distribution of ratings for the content ratings.
 # Conclusion
 
 Through this exploration data analysis, we strive to summarize the main characteristics of the Google Play Store.  
-
-
-https://www.kaggle.com/getting-started/122890#712972
