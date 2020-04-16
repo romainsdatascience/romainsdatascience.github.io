@@ -6,7 +6,6 @@ header:
   image: "images/BreastCancerWisconsinFinal_files/doctors.jpg"
 excerpt: "Classification of cancerous tumors on the Breast Cancer Wisconsin dataset"
 classes: wide
-author_profile: false
 ---
 
 In this project, we will apply basic classification models on the Breast Cancer Wisconsin dataset. The discussion is centered around the different basic classification models and the best way to preprocess the data according to the model we use. Nevertheless, this project also include brief data profiling, exploration data analysis and feature selection sections.
