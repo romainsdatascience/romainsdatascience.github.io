@@ -34,21 +34,8 @@ from sklearn.utils import class_weight
 from scipy.stats import reciprocal
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.metrics import make_scorer
-from tensorflow import backend as K
 ```
 
-
-    ---------------------------------------------------------------------------
-
-    ImportError                               Traceback (most recent call last)
-
-    <ipython-input-102-a5fc9fdd33f9> in <module>
-         13 from sklearn.model_selection import RandomizedSearchCV
-         14 from sklearn.metrics import make_scorer
-    ---> 15 from tensorflow import backend as K
-
-
-    ImportError: cannot import name 'backend' from 'tensorflow' (/opt/anaconda3/envs/tf2/lib/python3.7/site-packages/tensorflow/__init__.py)
 
 
 ## Read the data
