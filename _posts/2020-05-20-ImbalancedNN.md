@@ -2,7 +2,7 @@
 title: "Fraud Detection using deep learning"
 date: 2020-05-20
 tags: [Tensorflow, Neural Network]
-excerpt: "Basic NLP on Trump's speeches"
+excerpt: "Classification on an imbalanced dataset"
 classes: wide
 ---
 

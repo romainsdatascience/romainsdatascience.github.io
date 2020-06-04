@@ -4,7 +4,7 @@ date: 2020-04-10
 tags: [Classification]
 header:
   image: "images/BreastCancerWisconsinFinal_files/doctors.jpg"
-excerpt: "Classification of cancerous tumors on the Breast Cancer Wisconsin dataset"
+excerpt: "Classification of cancerous tumors on the famous Breast Cancer Wisconsin dataset"
 classes: wide
 ---
 
