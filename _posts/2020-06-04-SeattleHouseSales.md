@@ -1,7 +1,7 @@
 ---
 title: "Seattle House Sales Predictions"
 date: 2020-04-10
-tags: [Classification]
+tags: [Regression]
 header:
 excerpt: "Regression on the House Sales in King County dataset"
 classes: wide
@@ -669,7 +669,7 @@ ax = geo_data.plot(kind="scatter", x="long", y="lat", figsize=(15,15),
                        colorbar=False, alpha=0.1)
 
 # King County map in the background
-king_county_img= mpimg.imread('kingcountyseattle.png') 
+king_county_img= mpimg.imread('kingcountyseattle.png')
 plt.imshow(king_county_img, alpha=0.5, extent=[-122.5717,-121.058509,47.045649,47.802443],
            cmap=plt.get_cmap("jet"))
 
